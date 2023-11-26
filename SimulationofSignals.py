@@ -50,10 +50,26 @@ import matplotlib.pyplot as plt
 # plt.plot(x,y,'r')
 # plt.show()
 # DT
-x=np.arange(-10,10)
-y=np.zeros(len(x))
-y[np.all([(x>=-3)&(x<=0)],axis=0)]=-1
-y[np.all([(x>=0)&(x<=3)],axis=0)]=1
-plt.stem(x,y,'r')
-plt.xticks(x)
-plt.show()
+# x=np.arange(-10,10)
+# y=np.zeros(len(x))
+# y[np.all([(x>=-3)&(x<=0)],axis=0)]=-1
+# y[np.all([(x>=0)&(x<=3)],axis=0)]=1
+# plt.stem(x,y,'r')
+# plt.xticks(x)
+# plt.show()
+
+# Triangular Signal CT
+# x=np.arange(6)
+# y=np.arange(4,-1,-1)
+# z=np.concatenate([x,y])
+# plt.plot(z)
+# plt.show()
+# DT
+# x=np.arange(6)
+# y=np.arange(4,-1,-1)
+# z=np.concatenate([x,y])
+# plt.stem(z)
+# plt.xticks(np.arange(11))
+# plt.show()
+
+
