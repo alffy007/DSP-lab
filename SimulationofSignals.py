@@ -42,10 +42,18 @@ import matplotlib.pyplot as plt
 # plt.show()
 
 
-# Bipolar Pulse Signal
-x=np.arange(-10,10,0.01)
+# Bipolar Pulse Signal CT
+# x=np.arange(-10,10,0.01)
+# y=np.zeros(len(x))
+# y[np.all([(x>=-3)&(x<=0)],axis=0)]=-1
+# y[np.all([(x>=0)&(x<=3)],axis=0)]=1
+# plt.plot(x,y,'r')
+# plt.show()
+# DT
+x=np.arange(-10,10)
 y=np.zeros(len(x))
 y[np.all([(x>=-3)&(x<=0)],axis=0)]=-1
 y[np.all([(x>=0)&(x<=3)],axis=0)]=1
-plt.plot(x,y,'r')
+plt.stem(x,y,'r')
+plt.xticks(x)
 plt.show()
