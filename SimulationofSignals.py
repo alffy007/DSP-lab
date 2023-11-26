@@ -3,9 +3,40 @@ import matplotlib.pyplot as plt
 
 
 # unit impulse Signal
-x=np.arange(-10,10,0.01)
-y=np.zeros(len(x))
-y[np.isclose(x,0,atol=0.00000001)]=1
-plt.plot(x,y,'g')
-plt.show()
 
+# x=np.arange(-10,10,0.01)
+# y=np.zeros(len(x))
+# y[np.isclose(x,0,atol=0.00000001)]=1
+# plt.plot(x,y,'g')
+# plt.show()
+
+#Rectangular pulse ct
+
+# x=np.arange(-10,10,0.01)
+# w=int(input("Enter the width of Rectangular pulse: ")) 
+# y=np.zeros(len(x))
+# y[np.all([(x>=-w/2),(x<=w/2)],axis=0)]=1
+# plt.plot(x,y,'r')
+# plt.show()
+# dt
+# x=np.arange(-10,10)
+# w=int(input("Enter the width of Rectangular pulse: ")) 
+# y=np.zeros_like(x)
+# y[(x>=-w/2) & (x<=w/2)]=1
+# plt.stem(x,y,'r')
+# plt.xticks(x)
+# plt.show()
+
+# Ramp Signal CT
+# x=np.arange(-10,10,0.01)
+# y=np.copy(x)
+# y[y<0]=0
+# plt.plot(x,y),
+# plt.show()
+# DT
+# x=np.arange(-5,6)
+# y=np.copy(x)
+# y[y<0]=0
+# plt.stem(x,y)
+# plt.xticks(x)
+# plt.show()
