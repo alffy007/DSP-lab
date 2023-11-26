@@ -40,3 +40,12 @@ import matplotlib.pyplot as plt
 # plt.stem(x,y)
 # plt.xticks(x)
 # plt.show()
+
+
+# Bipolar Pulse Signal
+x=np.arange(-10,10,0.01)
+y=np.zeros(len(x))
+y[np.all([(x>=-3)&(x<=0)],axis=0)]=-1
+y[np.all([(x>=0)&(x<=3)],axis=0)]=1
+plt.plot(x,y,'r')
+plt.show()
