@@ -72,4 +72,35 @@ import matplotlib.pyplot as plt
 # plt.xticks(np.arange(11))
 # plt.show()
 
+#operations of signal
+# x=np.array([float(i) for i in input("Enter the A=Sequence:" ).split(",")])
+# t0=float(input("Enter the Shifting Factor: "))
+# A=float(input("Enter the Scale Factor: "))
+# t= np.linspace(min(0,t0-1),max(t0+1,len(x)),len(x))
+# plt.plot(t,x)
+# plt.plot(-t,x)
+# plt.plot(t+t0,x)
+# plt.plot(t,A*x)
+# plt.plot(t0+t,A*x)
+# plt.show()
 
+#Toeplitz Method
+
+x=np.array(input("Enter the Sequence x:").split(",")).astype(int)
+
+h=np.array(input("Enter the Sequence h:").split(",")).astype(int)
+hn=h
+row = len(x)
+column=len(x)+len(h)-1
+
+if(len(h)<column):
+    z=np.zeros(column-len(h))
+    h=np.concatenate((h,z))
+toeplitz= h
+for i in range(row-1):
+    h=np.roll(h,1)
+    toeplitz=np.concatenate((toeplitz,h))
+toeplitz.shape=(row,column)
+toeplitz= np.transpose(toeplitz)
+print(np.dot(toeplitz,x).astype(int))
+print(np.convolve(x,hn))        
