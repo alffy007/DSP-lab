@@ -86,21 +86,22 @@ import matplotlib.pyplot as plt
 
 #Toeplitz Method
 
-x=np.array(input("Enter the Sequence x:").split(",")).astype(int)
+# x=np.array(input("Enter the Sequence x:").split(",")).astype(int)
 
-h=np.array(input("Enter the Sequence h:").split(",")).astype(int)
-hn=h
-row = len(x)
-column=len(x)+len(h)-1
+# h=np.array(input("Enter the Sequence h:").split(",")).astype(int)
+# hn=h
+# row = len(x)
+# column=len(x)+len(h)-1
 
-if(len(h)<column):
-    z=np.zeros(column-len(h))
-    h=np.concatenate((h,z))
-toeplitz= h
-for i in range(row-1):
-    h=np.roll(h,1)
-    toeplitz=np.concatenate((toeplitz,h))
-toeplitz.shape=(row,column)
-toeplitz= np.transpose(toeplitz)
-print(np.dot(toeplitz,x).astype(int))
-print(np.convolve(x,hn))        
+# if(len(h)<column):
+#     z=np.zeros(column-len(h))
+#     h=np.concatenate((h,z))
+# toeplitz= h
+# for i in range(row-1):
+#     h=np.roll(h,1)
+#     toeplitz=np.concatenate((toeplitz,h))
+# toeplitz.shape=(row,column)
+# toeplitz= np.transpose(toeplitz)
+# print(np.dot(toeplitz,x).astype(int))
+# print(np.convolve(x,hn))        
+
