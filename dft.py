@@ -99,20 +99,20 @@ import cmath
     
 #Parsevals theorem
 
-def dft(x,k):
-    y=np.zeros(k,dtype=complex)
-    for i in range(k):
-        sum=0 
-        for m in range(k):
-            sum+=x[m]*np.exp(complex((-1j)*2*np.pi*i*m*(1/k)))
-        y[i]=sum
-    return y
+# def dft(x,k):
+#     y=np.zeros(k,dtype=complex)
+#     for i in range(k):
+#         sum=0 
+#         for m in range(k):
+#             sum+=x[m]*np.exp(complex((-1j)*2*np.pi*i*m*(1/k)))
+#         y[i]=sum
+#     return y
 
-x=np.array(input("Enter the sequence:").split(",")).astype(int)
-k=len(x)
-p=dft(x,k)
+# x=np.array(input("Enter the sequence:").split(",")).astype(int)
+# k=len(x)
+# p=dft(x,k)
 
-lhs=float(sum(abs(x*x))) 
-rhs=sum((abs(p*p))/k)
-print("lhs",lhs)
-print("Rhs",rhs)       
+# lhs=float(sum(abs(x*x))) 
+# rhs=sum((abs(p*p))/k)
+# print("lhs",lhs)
+# print("Rhs",rhs)       
